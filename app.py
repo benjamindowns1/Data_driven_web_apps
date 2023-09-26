@@ -1,4 +1,4 @@
-from flask import Flask,request, render_template
+from flask import Flask,request, render_template,jsonify
 
 
 app = Flask(__name__)
@@ -25,6 +25,11 @@ HOBBIES = [
 @app.route("/")
 def hello_world():
     return render_template('home.html', hobbies=HOBBIES)
+
+
+@app.route('\hobibies'):
+return jsonify(HOBBIES)
+
 
 print(__name__)
 if __name__== "__main__":
