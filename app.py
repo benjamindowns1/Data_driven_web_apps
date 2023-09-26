@@ -1,15 +1,30 @@
-from flask import Flask
+from flask import Flask,request, render_template
 
 
 app = Flask(__name__)
 
-HOBBIES = {
+
+HOBBIES = [
+    {
     'id':1,
-}
+    'title':'Reading and learning about new libraries',
+    'location':'Github',
+   },
+   {
+    'id':2,
+    'title':'Playing Chess',
+    'location':'Chess App',
+   },
+   {
+    'id':3,
+    'title':'Watching and Playing Cricket',
+    'location':'Online',
+   }
+]
 
 @app.route("/")
 def hello_world():
-    return "Hello world"
+    return render_template('home.html', hobbies=HOBBIES)
 
 print(__name__)
 if __name__== "__main__":
