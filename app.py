@@ -27,8 +27,9 @@ def hello_world():
     return render_template('home.html', hobbies=HOBBIES)
 
 
-@app.route('\hobibies'):
-return jsonify(HOBBIES)
+@app.route("/hobbies")
+def list_hobbies():
+ return jsonify(HOBBIES)
 
 
 print(__name__)
