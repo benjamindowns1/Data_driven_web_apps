@@ -25,6 +25,11 @@
         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
         mollit anim id est laborum.</p>
         <h2>Hobbies</h2>
+        <div>
+            {% for hobby in hobbies %}
+            {% include 'hobbies.html' %}
+            {% endfor %}
+        </div>
         <div class="text-center">
             <button  type="button" class="btn btn-primary btn-lg">Connect</button>
             <p class="mt-4">Copyright 2023, Juan</p>
